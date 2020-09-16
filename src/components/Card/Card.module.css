@@ -1,0 +1,22 @@
+.CardFront {
+  background-color: #10495c;
+  width: 170px;
+  height: 195px;
+  border-radius: 5px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.Back {
+  display: none;
+}
+.CardFront:hover {
+  translate: background-color 1s linear;
+
+  background-color: dodgerblue;
+}
+
+.InnerCard {
+  padding-top: 30px;
+  text-align: center;
+}
