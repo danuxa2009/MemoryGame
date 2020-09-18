@@ -21,4 +21,12 @@ const Card = (props) => {
   );
 };
 
+// const mapStateToProps = (state) => ({
+//   dataCards: state.cards.list,
+//   flippedCards: state.cards.flippedCards,
+// });
+// const mapDispatchToProps = (dispatch) => ({
+
+// });
+
 export default Card;
