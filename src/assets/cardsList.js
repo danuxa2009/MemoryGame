@@ -33,7 +33,18 @@ const cards = [
   },
 ];
 
-export const getShuffledCards = () => {
-  const deck = cards.concat(cards).sort(() => Math.random() - 0.5);
-  return deck;
-};
+export function getShuffledCards() {
+  const shuffled = cards.slice();
+  const result = [];
+  shuffled
+    .sort(() => Math.random() - 0.5)
+    .forEach((card) => shuffled.push({ ...card }));
+
+  for (let i = 0; i < shuffled.length; i++) {
+    const card = shuffled[i];
+    card.id = i + 1;
+    result[card.id] = card;
+  }
+
+  return result;
+}

@@ -1,4 +1,4 @@
-.mainBoard {
+.MainBoard {
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -6,9 +6,13 @@
   flex-wrap: wrap;
 }
 
-.cards {
+.Cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 700px;
+}
+
+.Wrapper {
+  display: flex;
 }

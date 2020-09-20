@@ -1,32 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./Card.module.css";
 
-const Card = (props) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const flipHandle = () => {
-    setIsFlipped(!isFlipped);
-  };
-
+const Card = ({ id, isFlipped, card, cardClickHandler }) => {
   return (
     <div
-      id={props.id}
+      id={id}
       className={classes.CardFront}
-      onClick={() => flipHandle()}
+      onClick={() => cardClickHandler(id)}
     >
       <div className={isFlipped ? classes.InnerCard : classes.Back}>
-        <img src={props.card} alt={"card " + props.id} />
+        <img src={card} alt={"card " + id} />
       </div>
     </div>
   );
 };
-
-// const mapStateToProps = (state) => ({
-//   dataCards: state.cards.list,
-//   flippedCards: state.cards.flippedCards,
-// });
-// const mapDispatchToProps = (dispatch) => ({
-
-// });
 
 export default Card;
