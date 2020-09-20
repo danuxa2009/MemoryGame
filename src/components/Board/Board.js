@@ -20,7 +20,7 @@ const Board = ({
   };
   return (
     <div className={classes.Wrapper}>
-      <ScoreWindow startNewGameHandler={startNewGame} score={movesScore} />
+      <ScoreWindow gameOver={gameOver} score={movesScore} />
       <div className={classes.MainBoard}>
         <div className={classes.Cards}>
           {dataCards.map((item, index) => {
